@@ -12,7 +12,7 @@ export function searchMovies(searchText) {
   axios
     .get("https://api.themoviedb.org/3/search/movie", {
       params: {
-        api_key: "66da9c9715a8aa6ea7123977e1274068",
+        api_key: "087170f6b5443a479b740284b253376d",
         query: searchText,
         language: "it-IT",
       },
