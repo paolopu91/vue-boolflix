@@ -1,7 +1,12 @@
 <template>
  <div>
+  <!-- components header  -->
+  <!-- here i will do the callback with axios -->
   <TheHeader></TheHeader>
+
+  <!-- components main -->
   <TheMain></TheMain>
+
  </div>
 </template>
 
