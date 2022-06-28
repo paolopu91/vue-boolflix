@@ -23,6 +23,7 @@ export default {
     onSearch(){
         console.log(this.userSearch)
         searchMovies(this.userSearch)
+        
     }
   }
 }
