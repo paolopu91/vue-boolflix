@@ -1,28 +1,24 @@
 <template>
-    <div>
-        <!-- qui avremo la barra di ricerca per ricercare i nostri dati, tramite un emit o lo {store} lo manderemo poi all'app.vue -->
+  <div>
+    <div class="container">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+        </div>
     </div>
+  </div>
 </template>
 
-
 <script>
-import axios from "axios";
-
+// import {searchMovies} from "../store";
 export default {
-    data(){
-        return{
-            name:"TheHeader",
-        }
-    },
-    computed:{
-        axios.get("").then()
-    }
+  methods: {
+  },
+  mounted() {
+    // searchMovies("futuro")
+  }
 }
 </script>
 
-
-
-
 <style>
-
 </style>

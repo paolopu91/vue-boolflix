@@ -1,28 +1,35 @@
 <template>
-    <div>
-        <!-- creare due file :
-        filmList
-        SeriesList -->
-        <div id="movieList">
-            <!-- stampare una movie card per ogni film, con un ciclo -->
-        </div>
+  <div>
+    <div id="moviesList">
 
-        <div id="seriesList">
-            <!-- stampare una series list con un ciclo -->
-        </div>
-
-        
+      <ul>
+        <!-- Stampare una MovieCard per ogni film con il ciclo -->
+      </ul>
+      
     </div>
+
+    <div id="seriesList">
+
+        <ul>
+            <!-- Stampare una MovieCard per ogni film con il ciclo -->
+        </ul>
+      
+    </div>
+  </div>
 </template>
 
-
 <script>
-
+import { state } from "../store";
 export default {
-    data(){
-        return{
-            name:"TheMain",
-        }
-    }
-}
+  computed: {
+    moviesList() {
+      return state.moviesList;
+    },
+  },
+  methods: {
+    
+  },
+};
 </script>
+
+<style></style>
