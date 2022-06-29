@@ -1,7 +1,11 @@
 <template>
   <div class="container">
-    <div id=" moviesList">                                                                    
-        <TheCardMovie />
+    <div id=" moviesList">   
+
+        <TheCardMovie>
+
+        </TheCardMovie>
+        
     </div>
 
     <div id="seriesList">
@@ -20,6 +24,7 @@ export default {
         };
     },
     computed: {
+    
     },
     methods: {},
     components: { TheCardMovie }

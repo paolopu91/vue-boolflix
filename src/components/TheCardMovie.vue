@@ -3,15 +3,20 @@
     <!-- userò questa card dalla milestone numero 4 -->
     <div>
       <ul class="list-unstyled text-center" v-for="(movie,i) in moviesList" :key="i">
-          <li>
-            <div class="container text-start">
-              <span class=" text-danger fs-3">MOVIES</span>
-            </div>
-          </li>           
+        <li>
+          <div class="container text-start">
+            <span class=" text-danger fs-3">MOVIES</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <img :src="boolflixPoster + [movie.poster_path]" alt=""><!-- copertina film-->
+          </div>                                                                  
+        </li>              
         <li class="my-2">
             <span class="text-primary">Title</span> : 
             <span class="text-success">{{movie.title}}</span>                           <!-- title of films -->
-        </li>                                        
+        </li>                                     
         <li class="my-2">
             <span class="text-primary">Original Title</span> : 
             <span class="text-danger">{{movie.original_title}}</span>                  <!-- original title of films -->
@@ -30,7 +35,16 @@
         
     <!-- series list -->
     <div>
+
+      
+
+      <!-- stamp list -->
       <ul class="list-unstyled text-center" v-for="(serie,i) in seriesList" :key="i">
+        <li>
+          <div class="container">
+            <img :src="boolflixPoster + [serie.poster_path]"  alt="">  
+          </div>
+        </li>
         <li>
           <div class="container text-start">
             <span class="text-secondary fs-3">SERIES TV</span>
@@ -44,13 +58,16 @@
         </li>
         <li class="my-2 ">
           <span class="text-warning">Languages</span> <span class="text-info">{{serie.original_language}}</span> 
-          <lang-flag :iso="serie.original_language"></lang-flag>                     <!-- languages of series -->
+          <lang-flag :iso="serie.original_language"></lang-flag>                                                                         <!-- languages of series -->
         </li>
         <li class="my-2 border-bottom">
-          <span class="text-warning">Vote</span> <span>{{serie.vote_average}} </span>                               <!-- vote_average of series -->
+          <span class="text-warning">Vote</span> <span>{{serie.vote_average}} </span>                                                   <!-- vote_average of series -->
         </li>
       </ul>
+
     </div>
+
+
   </div>
 </template>
 
@@ -61,18 +78,23 @@ import { state } from "../store";
 export default {
   data (){
     return{
-
+      
     }
   },
   computed:{
-      moviesList() {
-          return state.moviesList;
-        },
-        seriesList() {
-          return state.seriesList;
-        },
-    
-  }
+    moviesList() {
+        return state.moviesList;
+      },
+    seriesList() {
+      return state.seriesList;
+    },
+     boolflixPoster(){
+      return "https://image.tmdb.org/t/p/"+"w342/"
+    }
+  },
+  methods:{
+  
+  },
 }
 </script>
 
