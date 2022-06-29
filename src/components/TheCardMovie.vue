@@ -28,7 +28,7 @@
         </li>                               
         <li class="my-2 border-bottom">
             <span class="text-primary">Vote </span> : 
-            <span class="">{{movie.vote_average}}</span>                              <!-- vote_average of films -->
+            <span class="">{{getStars}}</span>                              <!-- vote_average of films -->
         </li> 
       </ul>   
     </div> 
