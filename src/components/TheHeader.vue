@@ -25,7 +25,7 @@ export default {
         searchMovies(this.userSearch)
         
     }
-  }
+  },
 }
 </script>
 
