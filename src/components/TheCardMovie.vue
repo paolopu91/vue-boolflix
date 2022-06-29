@@ -28,7 +28,7 @@
         </li>                               
         <li class="my-2 border-bottom">
             <span class="text-primary">Vote </span> : 
-            <span class="">{{getStars}}</span>                              <!-- vote_average of films -->
+            <span v-html="getStars(movie)"></span>                              <!-- vote_average of films -->
         </li> 
       </ul>   
     </div> 
@@ -54,7 +54,7 @@
           <span class="text-warning">Title</span> <span class="text-success">{{serie.name}} </span>                                      <!-- title of series -->
         </li>
         <li class="my-2 ">
-          <span class="text-warning">Original Title</span> <span class="text-danger">{{serie.original_name}}</span>                     <!-- original title of series -->
+          <span class="text-warning">Original Title</span> <span class="text-danger">{{serie.original_name}}</span>                       <!-- original title of series -->
         </li>
         <li class="my-2 ">
           <span class="text-warning">Languages</span> <span class="text-info">{{serie.original_language}}</span> 
@@ -62,9 +62,7 @@
         </li>
         <li class="my-2 border-bottom">
           <span class="text-warning">Vote</span> 
-          <span>
-            {{getStars}}                       <!-- vote_average of series -->
-          </span>                                                   
+          <span v-html="getStars(serie)"></span>                                                                                         <!-- vote_average of series -->                                               
         </li>
       </ul>
 
@@ -94,12 +92,23 @@ export default {
      boolflixPoster(){
       return "https://image.tmdb.org/t/p/"+"w342/"
     },
-    getStars(){
-    return Math.floor(Math.random() * this.voteArray.length)
-    }
+    
   },
   methods:{
-  
+    // function for my stars under img
+  getStars(vote){
+    const votes = Math.ceil(vote.vote_average / 2);
+    const fullStar = [];
+    const emptyStar= [];
+    for(let i = 0; i<votes ; i++){
+      fullStar.push("<i class=\"fa fa-solid fa-star\"></i>");
+    }
+    for(let i=0; i < (5-votes); i++ ){
+      emptyStar.push("<i class=\"fa fa-regular fa-star\"></i>")
+    }
+    const fullVotes= fullStar.join("") + emptyStar.join("");
+    return fullVotes
+  },
   },
 }
 </script>
