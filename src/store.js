@@ -21,6 +21,7 @@ export function searchMovies(userSearch) {
       state.moviesList = resp.data.results;
     });
     
+    
     // callback for series
     axios
     .get("https://api.themoviedb.org/3/search/tv", {
@@ -34,3 +35,4 @@ export function searchMovies(userSearch) {
       state.seriesList = resp.data.results;
     });
 }
+

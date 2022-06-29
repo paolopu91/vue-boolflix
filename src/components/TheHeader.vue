@@ -15,15 +15,14 @@ import {searchMovies} from "../store";
 export default {
     data(){
         return{
-            name:"TheHeader",
-            userSearch:"",
+          name:"TheHeader",
+          userSearch:"",
         }
     },
   methods:{
     onSearch(){
-        console.log(this.userSearch)
-        searchMovies(this.userSearch)
-        
+      console.log(this.userSearch)
+      searchMovies(this.userSearch)
     }
   },
 }
