@@ -1,5 +1,5 @@
 <template>
- <div>
+ <div class="app">
   <!-- components header  -->
   <!-- here i will do the callback with axios -->
   <TheHeader></TheHeader>
@@ -27,12 +27,7 @@ export default {
 <style lang="scss">
 @import "./assets/scss/main";
 
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.app {
+  background-color: dimgray;
 }
 </style>

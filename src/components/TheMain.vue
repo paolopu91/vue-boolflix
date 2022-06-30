@@ -1,11 +1,15 @@
 <template>
   <div class="container">
-    <div id=" moviesList">   
+    <div id=" moviesList">  
 
-        <TheCardMovie>
+      <div>
+        <TheCardMovie></TheCardMovie>
+      </div>
 
-        </TheCardMovie>
-        
+      <div>
+        <TheCardMovie></TheCardMovie>
+      </div>  
+      
     </div>
 
     <div id="seriesList">
@@ -13,6 +17,8 @@
     </div>
   </div>
 </template>
+
+
 
 <script>
 // import { state } from "../store";
