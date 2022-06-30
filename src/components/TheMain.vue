@@ -5,15 +5,10 @@
       <div>
         <TheCardMovie></TheCardMovie>
       </div>
-
-      <div>
-        <TheCardMovie></TheCardMovie>
-      </div>  
-      
+  
     </div>
 
-    <div id="seriesList">
-      <TheCardMovie />  
+    <div id="seriesList">  
     </div>
   </div>
 </template>
