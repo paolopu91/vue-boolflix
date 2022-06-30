@@ -28,7 +28,7 @@
         </li>                               
         <li class="my-2 border-bottom">
             <span class="text-primary">Vote </span> : 
-            <span v-html="getStars(movie)"></span>                              <!-- vote_average of films -->
+            <span v-html="movieRating(movie)"></span>                              <!-- vote_average of films -->
         </li> 
       </ul>   
     </div> 
@@ -62,7 +62,7 @@
         </li>
         <li class="my-2 border-bottom">
           <span class="text-warning">Vote</span> 
-          <span v-html="getStars(serie)"></span>                                                                                         <!-- vote_average of series -->                                               
+          <span v-html="movieRating(serie)"></span>                                                                                         <!-- vote_average of series -->                                               
         </li>
       </ul>
 
@@ -79,7 +79,7 @@ import { state } from "../store";
 export default {
   data (){
     return{
-      voteArray:[1,2,3,4,5]
+      
     }
   },
   computed:{
@@ -96,7 +96,7 @@ export default {
   },
   methods:{
     // function for my stars under img
-  getStars(vote){
+  movieRating(vote){
     const votes = Math.ceil(vote.vote_average / 2);
     const fullStar = [];
     const emptyStar= [];
